@@ -1,9 +1,27 @@
+// const router = require("express").Router();
+// const { createNewBlog, getAllBlogs,deleteBlog } = require("../controllers/blogController");
+
+// const authMiddleware = require("../middleware/authMiddleware");
+
+
+// //create Blog
+// router.post("/create", authMiddleware, createNewBlog);
+// router.get("/", getAllBlogs);
+
+// module.exports = router;
+
 const router = require("express").Router();
-const { createNewBlog, getAllBlogs } = require("../controllers/blogController")
+const { createNewBlog, getAllBlogs, deleteBlog } = require("../controllers/blogController");
 
+const authMiddleware = require("../middleware/authMiddleware");
 
-//create Blog
-router.post("/create",  createNewBlog);
+// Create Blog (requires authentication)
+router.post("/create", authMiddleware, createNewBlog);
+
+// Delete Blog (requires authentication)
+router.delete("/:id", authMiddleware, deleteBlog);
+
+// Get all Blogs (no authentication required)
 router.get("/", getAllBlogs);
 
-module.exports = router
+module.exports = router;

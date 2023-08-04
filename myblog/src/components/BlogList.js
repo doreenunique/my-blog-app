@@ -6,9 +6,34 @@ function BlogList() {
   const [blogs, setBlogs] = useState([])
 
   async function getAllBlogs() {
-    let response = await axios.get("http://localhost:2222/blog")
-    setBlogs(response.data)
-    console.log(blogs)
+    try {
+      let response = await axios.get("http://localhost:2222/blog",
+      {
+        headers: {
+          Authorization: `Bearer ${localStorage.getItem("token")}`,
+        }, 
+      });
+      setBlogs(response.data)
+      console.log(blogs);
+    } catch (error) {
+      console.log(error);
+    }
+  }
+    
+    
+  
+
+  async function deleteBlog(blogId) {
+    try {
+      await axios.delete(`http://localhost:2222/blog/${blogId}`,
+      {
+        headers: 
+        {"Authorization": `Bearer ${localStorage.getItem('token')}`}
+      });
+      getAllBlogs(); // Refresh the blogs after successful deletion
+    } catch (error) {
+      console.log(error);
+    }
   }
 
   useEffect(() =>{
@@ -33,7 +58,9 @@ function BlogList() {
               <h3>Title:{blog.title}</h3>
               <h4>Author: {blog.author ? blog.author : "Anonymous"}</h4>
               <p>Content: {blog.content} </p>
-              <p>Category: {blog.category} </p>             
+              <p>Category: {blog.category} </p>   
+             
+              <button onClick={() => deleteBlog(blog._id)}>Delete</button>
             </div>
           </div>
           )     

@@ -24,6 +24,7 @@ function Navbar() {
           <div>
             <Link to="/blogs" className="links">View Blogs</Link> 
             <Link to="/" className="links">Add a Blog</Link> 
+            <Link to="/profile" className="links">Profile</Link>
             <Link onClick={logout} to="/login" className="links">Logout</Link> 
           </div>           
         ): (

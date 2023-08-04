@@ -9,6 +9,11 @@ function Login() {
   
   async function login(e) {
     e.preventDefault();
+    // Check if username and password are not empty
+  if (!username || !password) {
+    alert("Please enter both username and password.");
+    return;
+  }
     try {
       let user = {
         username,
