@@ -18,7 +18,7 @@ const userRoute = require("./Routers/userRouter");
 
 
 
-app.use("/blog",  authMiddleware, blogRoute);
+app.use("/blog", blogRoute);
 app.use("/user",  userRoute);
 
 app.listen(port, () => {

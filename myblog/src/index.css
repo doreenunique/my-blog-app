@@ -1,4 +1,229 @@
-body {
+/* Import Bootstrap CSS */
+@import url('https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css');
+
+.App{
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  /*background-image: url("https://images.pexels.com/photos/3850526/pexels-photo-3850526.jpeg?auto=compress&cs=tinysrgb&w=600");*/
+   background-color: #3f7da7; 
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position:inherit;
+  background-blend-mode:overlay;
+  backdrop-filter: blur(10px);
+}
+.blogs {
+  background-image: url("https://images.pexels.com/photos/3850526/pexels-photo-3850526.jpeg?auto=compress&cs=tinysrgb&w=600") ;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position:inherit;
+  background-blend-mode:overlay;
+  backdrop-filter: blur(10px);
+
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+/* Navbar Styles */
+.navbar {
+  background-color: #6d1f39  /* rgb(224, 195, 158)*/;
+  margin-bottom: 10px;
+
+}
+
+.left-nav {
+  margin-left: 10px;
+}
+
+.right-nav ul {
+  list-style: none;
+  margin-right: 10px;
+}
+
+.right-nav .links {
+  margin-left: 12px;
+  border-radius: 3px;
+  background-color: rgb(36, 6, 51);
+  padding: 5px;
+}
+
+.links {
+  text-decoration: none;
+  color: rgb(206, 198, 198);
+}
+
+.form {
+  max-width: 500px;
+  margin: 0 auto;
+  padding: 10px;
+  text-align: center;
+}
+
+.form input {
+  margin: 10px 0;
+}
+
+.form label {
+  margin: 10px;
+  max-height: 300px;
+  height:max-content;
+}
+
+.form button {
+  padding: 8px;
+  border: none;
+  background-color: rgb(47, 2, 63);
+  color: rgb(188, 144, 144) #3333;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+
+.form {
+  min-height: 400px;
+}
+
+.form-field {
+  margin-bottom: 20px; 
+}
+
+.quill-wrapper::after {
+  content: '';
+  display: block;
+  clear: both;
+  height: auto;
+}
+
+.form-control {
+  width:200px;
+  height:auto !important ;
+
+}
+
+
+.ql-editor {
+  min-height: 200px; 
+}
+
+.author-label {
+  font-size: 50px; 
+  font-weight: bold; 
+}
+
+
+.card {
+  display: flex;
+  flex-direction: column; 
+}
+
+/* Fixed height for the image */
+.card-img-top {
+  height: 300px; 
+  width: auto;
+  object-fit: cover; 
+}
+
+/* Max height for card content, allowing for some overflow */
+.card-body {
+  max-height: 400px;
+  overflow-y: auto; 
+}
+
+.form-label  {
+  font-size: 25px;
+  color: white;
+  font-weight: bold;
+  text-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+
+}
+
+.form-h1 {
+  color: white;
+  text-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+
+
+.blog-name{
+  font-size: 25px;
+  color: rgb(83, 156, 172);
+  font-weight: bold;
+  text-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+
+.welcome-page {
+  min-height: max-content;
+   
+}
+
+.slide {
+  width: 100%;
+  height: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position:inherit;
+  background-blend-mode:overlay;
+  backdrop-filter: blur(10px);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
@@ -6,6 +231,10 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background-image: url("https://images.pexels.com/photos/1049298/pexels-photo-1049298.jpeg?auto=compress&cs=tinysrgb&w=600");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-blend-mode: overlay;
   
 }
 
@@ -68,4 +297,4 @@ code {
   cursor: pointer;
   border-radius: 5px;
 
-}
+} */

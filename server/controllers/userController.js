@@ -22,6 +22,7 @@ const signUp = async (req, res) => {
 }
 
 const login = async (req, res) => {
+  console.log(req.body)
   try {
     const { username, password } = req.body; // Extract username and password from request body
     
@@ -39,7 +40,7 @@ const login = async (req, res) => {
         username: checkUser.username,
       };
       
-      let token = jwt.sign(payload, "privateKey");
+      let token = jwt.sign(payload, "athens");
       res.send(token);
     }
   } catch (error) {
