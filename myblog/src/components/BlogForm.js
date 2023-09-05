@@ -74,7 +74,7 @@ function BlogForm() {
   ];
 
   return (
-    //<div className="blogs">
+    <div className="blogs">
     <div className="container">
       <h1 className="form-h1">Add A New Blog</h1>
       <form onSubmit={createBlog} className="form">
@@ -170,7 +170,7 @@ function BlogForm() {
         </button>
       </form>
     </div>
-//</div>
+ </div>
   );
 }
 

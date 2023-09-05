@@ -32,9 +32,9 @@ function Login() {
   }
 
   return (
-    //<div className="blogs">
+    <div className="blogs">
     <div className="form">
-      <h1 className="text-center mb-4">Login Form</h1>
+      <h1 className="form-h1" >Login!</h1>
       <form onSubmit={login}>
         <div className="mb-3">
           <label htmlFor="username" className="form-label">
@@ -65,7 +65,7 @@ function Login() {
         </button>
       </form>
     </div>
-    //</div>
+    </div>
   );
 }
 

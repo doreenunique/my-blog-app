@@ -43,7 +43,7 @@ function UserProfile() {
   }
 
   return (
-    //<div className="blogs">
+    <div className="blogs">
     <div className="user-profile">
       <h2>User Profile</h2>
       {!editMode ? (
@@ -88,7 +88,7 @@ function UserProfile() {
         </>
       )}
     </div>
-    //</div>
+    </div>
   );
 }
 

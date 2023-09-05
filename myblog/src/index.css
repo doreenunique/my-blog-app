@@ -157,19 +157,55 @@ code {
 }
 
 .welcome-page {
-  min-height: max-content;
+  image-orientation:flip;
    
 }
 
 .slide {
-  width: 100%;
-  height: 100%;
+  max-width: 25%;
+  height: auto;
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: center;
   background-position:inherit;
   background-blend-mode:overlay;
-  backdrop-filter: blur(10px);
+  backdrop-filter: blur(150px);
 }
+
+.carousel-img {
+  max-height: 850px; /* Adjust the max-height as needed to make the images smaller */
+  max-width: 1350px;
+  display: block;
+  margin: 0 auto;
+  background-image:overlay;
+  backdrop-filter: blur(150px);
+}
+
+.legend {
+  /* background-color: #497898;
+  position:relative;
+  top: 50%; /* Adjust to vertically center 
+  left: 50%; /* Adjust to horizontally center 
+  transform: translate(25%, 25%); Center both horizontally and vertically */
+  opacity: 5; /* Initially hidden */
+  transition: opacity 0.5s ease; /* Smooth fade-in effect */
+  display: flex;
+  flex-direction:inherit;
+  align-items: center; /* Centers content horizontally */
+  justify-content: center; /* Centers content vertically */
+  height: 45vh; /* Sets the height of the container to the viewport height */
+  font-size: 25px;
+  color: rgb(83, 156, 172);
+  font-weight: bold;
+  text-shadow: rgba(58, 104, 156, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(78, 120, 146, 0.397) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+  
+}
+
+.button{
+  text-align: center;
+  font-weight: bolder;
+  font-size: larger;
+}
+
 
 
 

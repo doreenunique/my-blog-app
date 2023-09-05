@@ -17,7 +17,7 @@ function UpdateForm() {
 const token = localStorage.getItem("token");
 const decodedToken  = jwt_decode(token);
 console.log('decoded', decodedToken )
-// blogId = decodedToken.userId;
+ blogId = decodedToken.userId;
   
 
   async function  updateBlog(event) {
@@ -80,7 +80,7 @@ console.log('decoded', decodedToken )
   ];
 
   return (
-   // <div className="blogs">
+    <div className="blogs">
     <div className="container">
         <h1>Update Blog</h1>
       <form onSubmit={updateBlog} className="form">
@@ -167,7 +167,7 @@ console.log('decoded', decodedToken )
         </button>
       </form>
     </div>
-    //</div>
+    </div>
   );
 }
 

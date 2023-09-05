@@ -33,9 +33,9 @@ function Signup() {
   }
 
   return (
-   //  <div className="blogs">
+   <div className="blogs">
     <div className="form">
-      <h1>Sign up Form</h1>
+      <h1 className="form-h1">Sign up!</h1>
       <form onSubmit={signup}>
         <div className="mb-3">
           <label htmlFor="username" className="form-label">
@@ -66,7 +66,7 @@ function Signup() {
         </button>
       </form>
     </div>
-    //</div>
+    </div>
   );
 }
 
